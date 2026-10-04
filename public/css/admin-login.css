@@ -1,0 +1,339 @@
+/* =========================================================
+   RESET
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* =========================================================
+   MAIN BACKGROUND & LAYOUT (FOTO DEMOS.JPG)
+========================================================= */
+.admin-login-page {
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/demos.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* MEMBUAT KOTAK BERGESER KE SAMPING KANAN */
+    padding-right: 8%; /* Jarak dari sisi kanan layar */
+    position: relative;
+}
+
+/* Lapisan gelap tipis agar foto latar tidak terlalu terang */
+.admin-login-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* =========================================================
+   GLASS CONTAINER & BOX (EFEK BLUR PERSIS CONTOH)
+========================================================= */
+.login-glass-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.45); /* Warna transparan seperti di gambar referensi */
+    backdrop-filter: blur(22px);           /* Efek blur kaca di belakang kotak */
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 22px;
+    padding: 38px 32px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    color: #1e293b;
+}
+
+/* =========================================================
+   BRAND LOGO
+========================================================= */
+.brand-logo {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+.login-heading {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.login-heading h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.login-heading p {
+    font-size: 11px;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* =========================================================
+   ALERT NOTIFICATION
+========================================================= */
+.login-alert {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px 30px 10px 10px;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    background: rgba(255, 245, 245, 0.95);
+    animation: alertIn 0.3s ease;
+}
+
+.alert-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.alert-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.alert-content strong {
+    color: #991b1b;
+    font-size: 11px;
+}
+
+.alert-content span {
+    color: #7f1d1d;
+    font-size: 10px;
+}
+
+.alert-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    color: #991b1b;
+    cursor: pointer;
+}
+
+.hide-alert {
+    opacity: 0 !important;
+    transform: translateY(-6px) !important;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes alertIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1e293b;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.form-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-input > i {
+    position: absolute;
+    left: 14px;
+    z-index: 2;
+    color: #475569;
+    font-size: 12px;
+}
+
+.form-input input {
+    width: 100%;
+    height: 42px;
+    padding: 0 40px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.75);
+    color: #0f172a;
+    font-family: inherit;
+    font-size: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-input input::placeholder {
+    color: #64748b;
+}
+
+.form-input input:focus {
+    border-color: #1233b5;
+    box-shadow: 0 0 0 3px rgba(18, 51, 181, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #475569;
+    cursor: pointer;
+}
+
+.password-toggle:hover {
+    color: #1233b5;
+}
+
+/* =========================================================
+   OPTIONS (REMEMBER & FORGOT)
+========================================================= */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #334155;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.remember input {
+    width: 13px;
+    height: 13px;
+    accent-color: #1233b5;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #1233b5;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+.submit-button {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #1233b5;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(18, 51, 181, 0.35);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-button:hover {
+    background: #0f2a99;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(18, 51, 181, 0.45);
+}
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+.login-card-footer {
+    margin-top: 22px;
+    text-align: center;
+    color: #334155;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE MOBILE & TABLET
+========================================================= */
+@media (max-width: 900px) {
+    .admin-login-page {
+        justify-content: center;
+        padding-right: 0;
+        padding: 20px;
+    }
+
+    .login-glass-container {
+        max-width: 420px;
+    }
+}

@@ -1,0 +1,1032 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+
+    color: #172033;
+
+    background: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    min-height: 72px;
+
+    background: #ffffff !important;
+}
+
+.navbar-brand {
+    color: #172033 !important;
+}
+
+.navbar-brand img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: cover;
+}
+
+.navbar-brand strong {
+    color: #172033;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.navbar-brand small {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.navbar-nav .nav-link {
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    padding: 8px 14px;
+
+    transition: 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1233b5;
+}
+
+.navbar-nav .nav-link.active {
+    color: #1233b5;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.program-header {
+    padding: 85px 20px 75px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f7f9ff 55%,
+            #eaf0ff 100%
+        );
+
+    border-bottom: 1px solid #e4eaf5;
+}
+
+.program-header-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.program-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #1233b5;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.program-header h1 {
+    margin-bottom: 20px;
+
+    color: #102451;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+}
+
+.program-header p {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   PROGRAM SECTION
+========================================================= */
+
+.program-section {
+    padding: 80px 20px 90px;
+
+    background: #ffffff;
+}
+
+.program-intro {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.program-intro > span {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #1233b5;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.program-intro h2 {
+    margin-bottom: 15px;
+
+    color: #102451;
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.program-intro h2 strong {
+    color: #1233b5;
+}
+
+.program-intro p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PROGRAM GRID
+========================================================= */
+
+.program-grid {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 32px;
+}
+
+
+/* =========================================================
+   PROGRAM CARD
+========================================================= */
+
+.program-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #dce4f1;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #c7d3e9;
+
+    box-shadow:
+        0 18px 40px rgba(18, 51, 181, 0.08);
+}
+
+
+/* =========================================================
+   HEADER JURUSAN
+========================================================= */
+
+.program-card-header {
+    width: 100%;
+
+    min-height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 20px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8faff 65%,
+            #f0f4ff 100%
+        );
+
+    border-bottom: 1px solid #e5eaf3;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.program-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.program-logo {
+    width: 112px;
+
+    min-width: 112px;
+
+    height: 112px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce4f1;
+
+    border-radius: 4px;
+}
+
+.program-logo img {
+    display: block;
+
+    width: 96px;
+
+    height: 96px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.program-title {
+    min-width: 0;
+}
+
+.program-title-top {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   CODE
+========================================================= */
+
+.program-code {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    color: #ffffff;
+
+    background: #1233b5;
+
+    border-radius: 2px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.program-field {
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TITLE JURUSAN
+========================================================= */
+
+.program-title h2 {
+    margin: 0 0 5px;
+
+    color: #102451;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.program-title p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PARTNER
+========================================================= */
+
+.program-partner {
+    flex-shrink: 0;
+
+    margin-left: 25px;
+
+    padding: 7px 11px;
+
+    color: #1233b5;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe4f3;
+
+    border-radius: 3px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.program-card-body {
+    width: 100%;
+
+    padding: 28px 30px 30px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description {
+    margin-bottom: 25px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #334155;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.description p {
+    margin: 0;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   INFO GRID
+========================================================= */
+
+.program-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   INFO BOX
+========================================================= */
+
+.info-box {
+    min-height: 245px;
+
+    padding: 18px 18px;
+
+    background: #f7f9fc;
+
+    border: 1px solid #e7ecf4;
+
+    border-radius: 3px;
+}
+
+.info-box h3 {
+    margin: 0 0 13px;
+
+    color: #1233b5;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.info-box p {
+    margin: 0;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.info-box ul {
+    margin: 0;
+
+    padding-left: 18px;
+}
+
+.info-box li {
+    margin-bottom: 8px;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+.info-box li:last-child {
+    margin-bottom: 0;
+}
+
+.info-box li::marker {
+    color: #1233b5;
+}
+
+
+/* =========================================================
+   SKEMA
+========================================================= */
+
+.scheme {
+    margin-top: 20px;
+}
+
+.scheme span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.scheme strong {
+    display: inline-block;
+
+    padding: 7px 9px;
+
+    color: #1233b5;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe5ef;
+
+    border-radius: 3px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.program-bottom {
+    padding: 70px 20px;
+
+    background: #102451;
+}
+
+.program-bottom-content {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.program-bottom-content > span {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #9db5ef;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.program-bottom h2 {
+    margin-bottom: 14px;
+
+    color: #ffffff;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.program-bottom p {
+    margin: 0;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.program-footer {
+    padding: 20px;
+
+    background: #08152f;
+
+    text-align: center;
+}
+
+.program-footer p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .program-header {
+        padding: 65px 20px 60px;
+    }
+
+    .program-header h1 {
+        font-size: 35px;
+    }
+
+
+    .program-card-header {
+        padding: 20px 22px;
+    }
+
+    .program-heading {
+        gap: 17px;
+    }
+
+
+    .program-logo {
+        width: 90px;
+
+        min-width: 90px;
+
+        height: 90px;
+    }
+
+    .program-logo img {
+        width: 76px;
+
+        height: 76px;
+    }
+
+
+    .program-title h2 {
+        font-size: 21px;
+    }
+
+    .program-title p {
+        font-size: 12px;
+    }
+
+
+    .program-partner {
+        font-size: 9px;
+    }
+
+
+    .program-card-body {
+        padding: 25px 22px;
+    }
+
+
+    .program-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-box:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar-brand img {
+        width: 42px;
+
+        height: 42px;
+    }
+
+    .navbar-brand strong {
+        font-size: 13px;
+    }
+
+    .navbar-brand small {
+        font-size: 10px;
+    }
+
+
+    .navbar-nav {
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px 0;
+    }
+
+
+    /* HEADER */
+
+    .program-header {
+        padding: 55px 18px 50px;
+    }
+
+    .program-label {
+        font-size: 10px;
+    }
+
+    .program-header h1 {
+        font-size: 29px;
+    }
+
+    .program-header p {
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+
+    /* INTRO */
+
+    .program-section {
+        padding: 60px 15px 65px;
+    }
+
+    .program-intro {
+        margin-bottom: 38px;
+    }
+
+    .program-intro h2 {
+        font-size: 25px;
+    }
+
+    .program-intro p {
+        font-size: 13px;
+    }
+
+
+    /* CARD */
+
+    .program-grid {
+        gap: 23px;
+    }
+
+    .program-card-header {
+        display: block;
+
+        padding: 20px;
+    }
+
+
+    .program-heading {
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    .program-logo {
+        width: 85px;
+
+        min-width: 85px;
+
+        height: 85px;
+
+        padding: 6px;
+    }
+
+    .program-logo img {
+        width: 70px;
+
+        height: 70px;
+    }
+
+
+    .program-title h2 {
+        font-size: 19px;
+
+        line-height: 1.35;
+    }
+
+    .program-title p {
+        font-size: 11px;
+    }
+
+
+    .program-code {
+        font-size: 10px;
+    }
+
+    .program-field {
+        font-size: 10px;
+    }
+
+
+    .program-partner {
+        display: inline-block;
+
+        margin-top: 15px;
+
+        margin-left: 100px;
+
+        font-size: 9px;
+    }
+
+
+    /* BODY */
+
+    .program-card-body {
+        padding: 23px 18px 25px;
+    }
+
+
+    .description {
+        margin-bottom: 22px;
+    }
+
+    .description p {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    .program-info-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .info-box {
+        min-height: auto;
+
+        padding: 17px;
+    }
+
+
+    .info-box h3 {
+        font-size: 14px;
+    }
+
+    .info-box p {
+        font-size: 12px;
+    }
+
+    .info-box li {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+
+    /* BOTTOM */
+
+    .program-bottom {
+        padding: 55px 20px;
+    }
+
+    .program-bottom h2 {
+        font-size: 23px;
+    }
+
+    .program-bottom p {
+        font-size: 13px;
+    }
+
+
+    /* FOOTER */
+
+    .program-footer {
+        padding: 18px 15px;
+    }
+
+    .program-footer p {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .program-header h1 {
+        font-size: 26px;
+    }
+
+
+    .program-heading {
+        gap: 12px;
+    }
+
+
+    .program-logo {
+        width: 72px;
+
+        min-width: 72px;
+
+        height: 72px;
+    }
+
+    .program-logo img {
+        width: 58px;
+
+        height: 58px;
+    }
+
+
+    .program-title h2 {
+        font-size: 17px;
+    }
+
+    .program-title p {
+        font-size: 10px;
+    }
+
+
+    .program-partner {
+        margin-left: 84px;
+    }
+
+
+    .description p {
+        font-size: 12px;
+    }
+
+
+    .info-box li {
+        font-size: 11px;
+    }
+
+    .info-box p {
+        font-size: 11px;
+    }
+}

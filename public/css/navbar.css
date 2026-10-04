@@ -1,0 +1,77 @@
+/* =====================================================
+   NAVBAR BERSAMA (semua halaman publik)
+   File: public/css/navbar.css
+   Muat SETELAH bootstrap, style.css / profil.css
+====================================================== */
+
+.site-navbar {
+    width: 100%;
+    padding: 14px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.site-navbar > .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.site-navbar .navbar-brand {
+    margin: 0 auto 0 0;
+    color: #111827;
+}
+
+.site-navbar .navbar-brand strong {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.site-navbar .navbar-brand small {
+    display: block;
+    margin-top: 3px;
+    font-size: 15px;
+    color: #111827;
+}
+
+.site-navbar .navbar-nav {
+    align-items: center;
+    gap: 4px;
+}
+
+.site-navbar .navbar-nav .nav-link {
+    padding: 10px 12px;
+    color: #4b5563;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.25s ease;
+}
+
+.site-navbar .navbar-nav .nav-link:hover {
+    color: #0d6efd;
+}
+
+.site-navbar .navbar-nav .nav-link.active {
+    color: #111827;
+    font-weight: 500;
+}
+
+@media (max-width: 991.98px) {
+
+    .site-navbar > .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .site-navbar .navbar-nav {
+        align-items: flex-start;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .site-navbar .navbar-nav .nav-link {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

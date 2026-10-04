@@ -1,0 +1,640 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fd;
+    color: #1f2937;
+}
+
+
+/* =========================================================
+   WRAPPER
+========================================================= */
+
+.admin-wrapper {
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    background: #f7f8fd;
+    transition: margin-left 0.25s ease;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+    min-height: 70px;
+
+    padding: 0 32px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5eaf1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.topbar-title {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.admin-profile > i {
+    color: #3169e9;
+    font-size: 30px;
+}
+
+
+.admin-profile-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.admin-profile-info strong {
+    color: #1f2937;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.admin-profile-info span {
+    color: #8490a4;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+    padding: 32px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    margin-bottom: 23px;
+}
+
+
+.page-header h2 {
+    margin: 0 0 6px;
+
+    color: #172033;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.page-header p {
+    margin: 0;
+
+    color: #718096;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.form-card {
+    width: 100%;
+    max-width: 850px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf1;
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 14px rgba(16, 27, 49, 0.045);
+}
+
+
+/* =========================================================
+   FORM CARD HEADER
+========================================================= */
+
+.form-card-header {
+    min-height: 78px;
+
+    padding: 17px 22px;
+
+    border-bottom: 1px solid #edf0f5;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.form-card-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: #edf3ff;
+    color: #3169e9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+.form-card-header h3 {
+    margin: 0 0 4px;
+
+    color: #1b2b47;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.form-card-header p {
+    margin: 0;
+
+    color: #8993a5;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FORM CARD BODY
+========================================================= */
+
+.form-card-body {
+    padding: 25px 22px 22px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group-custom {
+    margin-bottom: 19px;
+}
+
+
+.form-group-custom:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.form-group-custom label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #34415a;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.optional-text {
+    color: #9aa4b2;
+
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   INPUT & SELECT
+========================================================= */
+
+.form-group-custom input,
+.form-group-custom select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dce2ec;
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #fbfcfe;
+    color: #273650;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-group-custom input::placeholder {
+    color: #a0a9b8;
+}
+
+
+.form-group-custom input:focus,
+.form-group-custom select:focus {
+    border-color: #8eabef;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(49, 105, 233, 0.08);
+}
+
+
+/* =========================================================
+   HELP TEXT
+========================================================= */
+
+.form-help {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #929bad;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-text {
+    margin-top: 6px;
+
+    color: #dc3545;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 5px;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+.error-text i {
+    margin-top: 2px;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.button-area {
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #edf0f5;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.btn-back {
+    min-height: 39px;
+
+    padding: 0 16px;
+
+    border: 1px solid #dce2ec;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #596579;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.btn-back:hover {
+    background: #f5f7fa;
+
+    border-color: #cfd6e1;
+
+    color: #3f4a5c;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.btn-save {
+    min-height: 39px;
+
+    padding: 0 17px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #3169e9;
+    color: #ffffff;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.btn-save:hover {
+    background: #2558ce;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px rgba(49, 105, 233, 0.18);
+}
+
+
+/* =========================================================
+   RESPONSIVE 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .content {
+        padding: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .topbar {
+        padding: 0 24px;
+    }
+
+
+    .content {
+        padding: 24px;
+    }
+
+
+    .form-card {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .topbar {
+        min-height: 65px;
+
+        padding: 0 18px;
+    }
+
+
+    .topbar-title {
+        font-size: 18px;
+    }
+
+
+    .admin-profile-info {
+        display: none;
+    }
+
+
+    .admin-profile > i {
+        font-size: 27px;
+    }
+
+
+    .content {
+        padding: 20px 16px;
+    }
+
+
+    .page-header h2 {
+        font-size: 21px;
+    }
+
+
+    .page-header p {
+        font-size: 12px;
+    }
+
+
+    .form-card-header {
+        padding: 16px;
+    }
+
+
+    .form-card-body {
+        padding: 20px 16px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .topbar {
+        padding: 0 12px;
+    }
+
+
+    .topbar-title {
+        font-size: 16px;
+    }
+
+
+    .content {
+        padding: 17px 12px;
+    }
+
+
+    .page-header h2 {
+        font-size: 19px;
+    }
+
+
+    .page-header p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+
+    .form-card-header {
+        min-height: 70px;
+
+        padding: 14px;
+    }
+
+
+    .form-card-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 13px;
+    }
+
+
+    .form-card-header h3 {
+        font-size: 14px;
+    }
+
+
+    .form-card-body {
+        padding: 18px 14px;
+    }
+
+
+    .button-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .btn-back,
+    .btn-save {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .main-content,
+    .form-group-custom input,
+    .form-group-custom select,
+    .btn-back,
+    .btn-save {
+        transition: none;
+    }
+
+}

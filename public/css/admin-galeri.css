@@ -1,0 +1,1832 @@
+/* =========================================================
+   ADMIN GALERI - SMKN 4 BOGOR
+========================================================= */
+
+:root {
+    --sidebar-width: 320px;
+
+    --primary: #3169e9;
+    --primary-dark: #255bd7;
+
+    --text-dark: #172b49;
+    --text: #34415a;
+    --text-muted: #7f8ca0;
+
+    --bg: #f5f7fb;
+    --white: #ffffff;
+
+    --border: #e7ebf2;
+
+    --success: #21834d;
+    --danger: #df3d4b;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+}
+
+
+/* =========================================================
+   ADMIN WRAPPER
+========================================================= */
+
+.admin-wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    position: relative;
+
+    margin-left: 290px;
+
+    width: calc(100% - 290px);
+
+    min-width: 0;
+
+    min-height: 100vh;
+
+    background: var(--bg);
+
+    overflow-x: hidden;
+
+    transition:
+        margin-left 0.25s ease,
+        width 0.25s ease;
+}
+
+
+/* =========================================================
+   SIDEBAR COLLAPSED
+========================================================= */
+
+body.sidebar-collapsed .main-content {
+    margin-left: 78px;
+
+    width: calc(100% - 78px);
+}
+
+
+/* =========================================================
+   TOP HEADER / NAVBAR
+========================================================= */
+
+.top-header {
+    position: relative;
+
+    z-index: 100;
+
+    width: 100%;
+
+    min-height: 90px;
+
+    padding: 22px 32px;
+
+    margin: 0;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e9edf5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    flex-shrink: 0;
+
+    max-width: none;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.page-title {
+    min-width: 0;
+
+    flex-shrink: 0;
+}
+
+.page-title h1 {
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+.page-title p {
+    margin: 5px 0 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box {
+    width: 250px;
+
+    height: 42px;
+
+    padding: 0 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e9f0;
+
+    border-radius: 10px;
+}
+
+.search-box i {
+    flex-shrink: 0;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+.search-box input {
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #1f2937;
+
+    font-family: inherit;
+
+    font-size: 12px;
+}
+
+.search-box input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================================================
+   ADMIN PROFILE
+========================================================= */
+
+.admin-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 7px 10px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    transition: 0.2s ease;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+.admin-profile:hover {
+    background: #f5f7fb;
+}
+
+
+/* =========================================================
+   ADMIN AVATAR
+========================================================= */
+
+.admin-avatar {
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #eef3ff;
+
+    color: #1233b5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   ADMIN INFO
+========================================================= */
+
+.admin-info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.admin-info strong {
+    display: block;
+
+    max-width: 180px;
+
+    color: #1f2937;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.admin-info span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROFILE ARROW
+========================================================= */
+
+.profile-arrow {
+    margin-left: 5px;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   CONTENT AREA
+========================================================= */
+
+.content-area {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 34px 34px 60px;
+
+    background: var(--bg);
+}
+
+
+/* =========================================================
+   CONTENT HEADING
+========================================================= */
+
+.content-heading {
+    width: 100%;
+
+    margin: 0 0 26px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.content-heading > div {
+    min-width: 0;
+}
+
+.content-heading h2 {
+    margin: 0 0 7px;
+
+    color: #142945;
+
+    font-size: 28px;
+
+    font-weight: 750;
+
+    line-height: 1.2;
+}
+
+.content-heading p {
+    margin: 0;
+
+    color: #7c899e;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BUTTON TAMBAH FOTO
+========================================================= */
+
+.btn-add {
+    flex-shrink: 0;
+
+    min-width: 153px;
+
+    height: 45px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(49, 105, 233, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-add:hover {
+    background: var(--primary-dark);
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 22px rgba(49, 105, 233, 0.23);
+}
+
+.btn-add i {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.alert-success-custom,
+.alert-danger-custom {
+    width: 100%;
+
+    margin: 0 0 22px;
+
+    padding: 13px 16px;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.alert-success-custom {
+    background: #eaf8f0;
+
+    border: 1px solid #ccebd9;
+
+    color: var(--success);
+}
+
+.alert-danger-custom {
+    background: #fff0f1;
+
+    border: 1px solid #ffd5d8;
+
+    color: var(--danger);
+}
+
+.alert-success-custom button,
+.alert-danger-custom button {
+    margin-left: auto;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TOTAL FOTO
+========================================================= */
+
+.gallery-stat {
+    width: 245px;
+
+    min-height: 100px;
+
+    margin: 0 0 34px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f5;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 7px 24px rgba(29, 49, 84, 0.055);
+}
+
+.stat-icon {
+    width: 50px;
+
+    height: 50px;
+
+    flex: 0 0 50px;
+
+    border-radius: 50%;
+
+    background: #e9f0ff;
+
+    color: var(--primary);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.gallery-stat span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #8a96a9;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+.gallery-stat strong {
+    display: block;
+
+    color: #172b49;
+
+    font-size: 25px;
+
+    font-weight: 750;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    width: 100%;
+
+    margin: 0 0 18px;
+}
+
+.section-heading h3 {
+    margin: 0 0 6px;
+
+    color: #172b49;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: #8290a5;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.gallery-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   GALLERY CARD
+========================================================= */
+
+.gallery-card {
+    width: 100%;
+
+    min-width: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #e9edf4;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 20px rgba(28, 50, 91, 0.055);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #dce4f1;
+
+    box-shadow:
+        0 12px 28px rgba(28, 50, 91, 0.10);
+}
+
+
+/* =========================================================
+   FOTO
+========================================================= */
+
+.gallery-photo {
+    position: relative;
+
+    width: 100%;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #edf1f7;
+}
+
+.gallery-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+.gallery-card:hover .gallery-photo img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   FOTO KOSONG
+========================================================= */
+
+.gallery-photo-empty {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #edf2fa;
+
+    color: #91a0b7;
+
+    font-size: 34px;
+}
+
+
+/* =========================================================
+   PHOTO OVERLAY
+========================================================= */
+
+.photo-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(13, 30, 62, 0.40);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    transition: opacity 0.22s ease;
+}
+
+.gallery-card:hover .photo-overlay {
+    opacity: 1;
+}
+
+.view-photo {
+    width: 43px;
+
+    height: 43px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: var(--primary);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.view-photo:hover {
+    background: #f5f7fb;
+
+    color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.gallery-card-body {
+    padding: 15px 17px 17px;
+}
+
+
+/* =========================================================
+   TANGGAL
+========================================================= */
+
+.gallery-date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 7px;
+
+    color: #8995a8;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+}
+
+.gallery-date i {
+    color: var(--primary);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   JUDUL
+========================================================= */
+
+.gallery-card-body h3 {
+    margin: 0 0 6px;
+
+    color: #182b48;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   DESKRIPSI
+========================================================= */
+
+.gallery-card-body p {
+    min-height: 32px;
+
+    margin: 0 0 15px;
+
+    color: #7f8ca0;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    overflow: hidden;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.gallery-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 5px;
+}
+
+.gallery-actions form {
+    margin: 0;
+
+    padding: 0;
+}
+
+.gallery-actions button,
+.gallery-actions a {
+    height: 34px;
+
+    padding: 0 11px;
+
+    border-radius: 7px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.gallery-actions button:hover,
+.gallery-actions a:hover {
+    transform: translateY(-1px);
+}
+
+.gallery-actions i {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   LIHAT
+========================================================= */
+
+.btn-view {
+    background: #ffffff !important;
+
+    border: 1px solid #d4dce8 !important;
+
+    color: #33435d !important;
+}
+
+.btn-view:hover {
+    background: #f5f7fb !important;
+
+    border-color: #c2ccdc !important;
+
+    color: #172640 !important;
+}
+
+
+/* =========================================================
+   EDIT
+========================================================= */
+
+.btn-edit {
+    background: #edf3ff !important;
+
+    border: 1px solid #d9e5ff !important;
+
+    color: #3169e9 !important;
+}
+
+.btn-edit:hover {
+    background: #dfeaff !important;
+
+    border-color: #cadbff !important;
+
+    color: #255bd7 !important;
+}
+
+
+/* =========================================================
+   DELETE
+========================================================= */
+
+.btn-delete {
+    background: #fff0f1 !important;
+
+    border: 1px solid #ffd8dc !important;
+
+    color: #df3d4b !important;
+}
+
+.btn-delete:hover {
+    background: #ffe2e5 !important;
+
+    border-color: #ffc8ce !important;
+
+    color: #c92e3d !important;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-gallery {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    min-height: 290px;
+
+    padding: 35px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9edf4;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 20px rgba(28, 50, 91, 0.045);
+}
+
+.empty-gallery-icon {
+    width: 60px;
+
+    height: 60px;
+
+    margin-bottom: 14px;
+
+    border-radius: 16px;
+
+    background: #eaf0ff;
+
+    color: var(--primary);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.empty-gallery h3 {
+    margin: 0 0 6px;
+
+    color: #1b2d49;
+
+    font-size: 18px;
+}
+
+.empty-gallery p {
+    margin: 0 0 18px;
+
+    color: #8995a8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-dialog {
+    max-width: 520px;
+
+    margin: 1.75rem auto;
+}
+
+.add-modal {
+    width: 100%;
+
+    border: none !important;
+
+    border-radius: 14px !important;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 18px 50px rgba(20, 36, 62, 0.20);
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.modal-header-custom {
+    padding: 20px 22px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+.modal-header-custom > div {
+    min-width: 0;
+}
+
+.modal-header-custom h3 {
+    margin: 0 0 5px;
+
+    color: #172640;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.modal-header-custom p {
+    margin: 0;
+
+    color: #8993a5;
+
+    font-size: 11px;
+}
+
+.modal-header-custom button {
+    width: 30px;
+
+    height: 30px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f4f9;
+
+    color: #68748a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.modal-header-custom button:hover {
+    background: #e7ecf5;
+
+    color: #33415a;
+}
+
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.modal-body-custom {
+    padding: 20px 22px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group-custom {
+    margin-bottom: 16px;
+}
+
+.form-group-custom:last-child {
+    margin-bottom: 0;
+}
+
+.form-group-custom label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #34415a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.form-group-custom input[type="text"],
+.form-group-custom textarea {
+    display: block;
+
+    width: 100%;
+
+    border: 1px solid #dce2ec;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #fbfcfe;
+
+    color: #273650;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group-custom input[type="text"] {
+    height: 40px;
+
+    padding: 0 12px;
+}
+
+.form-group-custom textarea {
+    min-height: 90px;
+
+    padding: 10px 12px;
+
+    resize: vertical;
+}
+
+.form-group-custom input[type="text"]:focus,
+.form-group-custom textarea:focus {
+    border-color: var(--primary);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(49, 105, 233, 0.08);
+}
+
+
+/* =========================================================
+   UPLOAD
+========================================================= */
+
+.upload-box {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 115px;
+
+    border: 1.5px dashed #cbd5e5;
+
+    border-radius: 8px;
+
+    background: #fafbfe;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.upload-box:hover {
+    border-color: var(--primary);
+
+    background: #f5f8ff;
+}
+
+.upload-box > i {
+    margin-bottom: 7px;
+
+    color: var(--primary);
+
+    font-size: 21px;
+}
+
+.upload-box span {
+    color: #44516a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.upload-box small {
+    margin-top: 4px;
+
+    color: #929bad;
+
+    font-size: 9px;
+}
+
+.upload-box input[type="file"] {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.modal-footer-custom {
+    padding: 14px 22px;
+
+    border-top: 1px solid #edf0f5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+.btn-cancel,
+.btn-save {
+    height: 35px;
+
+    padding: 0 15px;
+
+    border-radius: 7px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background: #ffffff;
+
+    border: 1px solid #d9dfeb;
+
+    color: #657188;
+}
+
+.btn-cancel:hover {
+    background: #f7f9fc;
+
+    border-color: #cbd4e2;
+
+    color: #4e5b71;
+}
+
+.btn-save {
+    background: var(--primary);
+
+    border: 1px solid var(--primary);
+
+    color: #ffffff;
+}
+
+.btn-save:hover {
+    background: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   VIEW IMAGE MODAL
+========================================================= */
+
+.gallery-view-modal {
+    position: relative;
+
+    background: #111b2e;
+
+    border: none;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.30);
+}
+
+.gallery-view-image {
+    width: 100%;
+
+    max-height: 65vh;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #111b2e;
+}
+
+.gallery-modal-close {
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    z-index: 5;
+
+    width: 34px;
+
+    height: 34px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.50);
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.gallery-modal-close:hover {
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.gallery-view-content {
+    padding: 18px 20px 20px;
+
+    color: #ffffff;
+}
+
+.gallery-view-content h2 {
+    margin: 0 0 7px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.gallery-view-date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 12px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 10px;
+}
+
+.gallery-view-date i {
+    color: #78a1ff;
+}
+
+.gallery-view-text {
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    white-space: pre-line;
+}
+
+
+/* =========================================================
+   DESKTOP BESAR
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .content-area {
+        padding-left: 42px;
+
+        padding-right: 42px;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        gap: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    :root {
+        --sidebar-width: 290px;
+    }
+
+    .main-content {
+        margin-left: 290px;
+
+        width: calc(100% - 290px);
+    }
+
+    body.sidebar-collapsed .main-content {
+        margin-left: 78px;
+
+        width: calc(100% - 78px);
+    }
+
+    .content-area {
+        padding: 30px 28px 50px;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .main-content {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    body.sidebar-collapsed .main-content {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET KECIL
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .top-header {
+        padding: 20px 24px;
+    }
+
+    .search-box {
+        width: 210px;
+    }
+
+    .content-area {
+        padding: 26px 22px 45px;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .main-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    body.sidebar-collapsed .main-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .top-header {
+        width: 100%;
+
+        min-height: 90px;
+
+        height: auto;
+
+        padding: 18px;
+
+        gap: 15px;
+    }
+
+    .page-title h1 {
+        font-size: 26px;
+    }
+
+    .page-title p {
+        font-size: 13px;
+    }
+
+    .admin-info {
+        display: none;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+
+    .content-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .content-heading h2 {
+        font-size: 23px;
+    }
+
+    .btn-add {
+        width: 100%;
+    }
+
+    .gallery-stat {
+        width: 100%;
+
+        max-width: 270px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-photo {
+        height: 215px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+    .top-header {
+        padding: 18px;
+    }
+
+    .page-title h1 {
+        font-size: 22px;
+    }
+
+    .page-title p {
+        font-size: 11px;
+    }
+
+    .search-box {
+        width: 150px;
+    }
+
+    .admin-profile {
+        padding: 5px;
+    }
+
+    .profile-arrow {
+        display: none;
+    }
+
+    .content-area {
+        padding: 18px 14px 35px;
+    }
+
+    .content-heading h2 {
+        font-size: 21px;
+    }
+
+    .gallery-photo {
+        height: 200px;
+    }
+
+    .gallery-actions {
+        flex-wrap: wrap;
+    }
+
+    .gallery-actions button,
+    .gallery-actions a {
+        flex: 1;
+    }
+
+    .empty-gallery {
+        min-height: 250px;
+    }
+
+    .modal-dialog {
+        max-width: calc(100% - 24px);
+
+        margin: 12px auto;
+    }
+
+    .modal-header-custom {
+        padding: 18px;
+    }
+
+    .modal-body-custom {
+        padding: 18px;
+    }
+
+    .modal-footer-custom {
+        padding: 13px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .main-content,
+    .gallery-card,
+    .gallery-photo img,
+    .btn-add,
+    .gallery-actions button,
+    .gallery-actions a {
+        transition: none;
+    }
+
+    .gallery-card:hover {
+        transform: none;
+    }
+
+    .gallery-card:hover .gallery-photo img {
+        transform: none;
+    }
+
+}

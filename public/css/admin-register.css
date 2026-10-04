@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   REGISTER PAGE
+========================================= */
+
+.register-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../images/sekolah gede.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 25, 65, 0.58);
+
+    backdrop-filter: blur(2px);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   REGISTER CARD
+========================================= */
+
+.register-card {
+    position: relative;
+
+    width: 460px;
+
+    padding: 35px 45px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.20);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    z-index: 3;
+
+    color: white;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 15px;
+}
+
+
+.school-logo {
+    width: 70px;
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    background: white;
+
+    padding: 5px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.register-card h1 {
+    text-align: center;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+
+.input-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    margin-bottom: 7px;
+
+    color: white;
+}
+
+
+.input-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ICON */
+
+.input-icon {
+    position: absolute;
+
+    left: 15px;
+
+    font-size: 15px;
+
+    color: #526070;
+
+    z-index: 2;
+}
+
+
+/* INPUT FIELD */
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 45px;
+
+    padding: 0 45px 0 43px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    color: #263238;
+
+    font-size: 13px;
+}
+
+
+.input-wrapper input::placeholder {
+    color: #888;
+}
+
+
+.input-wrapper input:focus {
+    background: white;
+
+    box-shadow:
+        0 0 0 2px rgba(31, 105, 235, 0.35);
+}
+
+
+/* =========================================
+   SHOW PASSWORD
+========================================= */
+
+.show-password {
+    position: absolute;
+
+    right: 13px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #526070;
+
+    font-size: 15px;
+}
+
+
+.show-password:hover {
+    color: #1233b5;
+}
+
+
+/* =========================================
+   AGREEMENT
+========================================= */
+
+.agreement {
+    margin-top: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+.agreement label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    cursor: pointer;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+.agreement input {
+    width: 15px;
+
+    height: 15px;
+
+    cursor: pointer;
+
+    accent-color: #1233b5;
+}
+
+
+/* =========================================
+   REGISTER BUTTON
+========================================= */
+
+.register-button {
+    width: 100%;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1233b5;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.register-button:hover {
+    background: #0d278c;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px rgba(18, 51, 181, 0.35);
+}
+
+
+/* =========================================
+   LOGIN LINK
+========================================= */
+
+.login-link {
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 12px;
+}
+
+
+.login-link a {
+    color: white;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   BACK TO WEBSITE
+========================================= */
+
+.back-home {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+
+.back-home:hover {
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .register-page {
+        padding: 25px 15px;
+    }
+
+    .register-card {
+        width: 100%;
+
+        padding: 30px 25px;
+    }
+
+}

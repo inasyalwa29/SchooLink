@@ -1,0 +1,2117 @@
+/* =========================================================
+   PROFIL PUBLIC - SMK NEGERI 4 BOGOR
+   ========================================================= */
+
+:root {
+    --blue: #1233b5;
+    --blue-dark: #081d70;
+    --blue-light: #eef3ff;
+    --blue-soft: #f5f7ff;
+    --yellow: #f5c400;
+    --green: #0ba34b;
+    --dark: #14213d;
+    --text: #536078;
+    --muted: #8490a3;
+    --white: #ffffff;
+    --border: #e6eaf2;
+    --section: #f7f9fc;
+    --shadow: 0 18px 50px rgba(20, 48, 130, 0.10);
+    --shadow-small: 0 10px 28px rgba(20, 48, 130, 0.08);
+    --radius: 22px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: var(--dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.profile-container {
+    width: min(1240px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.public-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 82px;
+    z-index: 9999;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid rgba(18, 51, 181, 0.08);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.navbar-container {
+    width: min(1380px, calc(100% - 70px));
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* Logo */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.navbar-brand img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.navbar-brand-text strong {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.navbar-brand-text span {
+    margin-top: 4px;
+    color: #7c8798;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+
+/* Menu */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.navbar-menu a {
+    position: relative;
+
+    padding: 10px 13px;
+
+    color: #596477;
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.navbar-menu a:hover {
+    color: var(--blue);
+    background: var(--blue-light);
+}
+
+.navbar-menu a.active {
+    color: var(--blue);
+}
+
+.navbar-menu a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 2px;
+
+    height: 3px;
+
+    background: var(--blue);
+    border-radius: 50px;
+}
+
+
+/* Button */
+
+.navbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 11px 18px;
+
+    color: #ffffff !important;
+    background: var(--blue);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    border-radius: 11px;
+
+    box-shadow: 0 9px 22px rgba(18, 51, 181, 0.20);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.navbar-button:hover {
+    color: #ffffff;
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 13px 28px rgba(18, 51, 181, 0.25);
+}
+
+.navbar-button i {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.profile-hero {
+    position: relative;
+
+    min-height: 610px;
+
+    padding: 150px 0 90px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* Decorative background */
+
+.profile-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    right: -230px;
+    top: -270px;
+
+    border-radius: 50%;
+
+    border: 90px solid rgba(18, 51, 181, 0.035);
+}
+
+.profile-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    left: -170px;
+    bottom: -200px;
+
+    border-radius: 50%;
+
+    border: 55px solid rgba(18, 51, 181, 0.03);
+}
+
+
+/* Overlay */
+
+.profile-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(18, 51, 181, 0.045),
+            transparent 28%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Hero content */
+
+.profile-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1240px, calc(100% - 80px));
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* Label */
+
+.profile-hero-label {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 14px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+
+    background: var(--blue-light);
+    border: 1px solid rgba(18, 51, 181, 0.10);
+
+    border-radius: 4px;
+}
+
+.profile-hero-label::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+}
+
+
+/* Main heading */
+
+.profile-hero h1 {
+    max-width: 1000px;
+
+    margin: 20px auto 18px;
+
+    color: var(--blue);
+
+    font-size: clamp(45px, 5.7vw, 72px);
+    font-weight: 500;
+
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.profile-hero h1 strong {
+    color: var(--blue);
+    font-weight: 800;
+}
+
+
+/* Description */
+
+.profile-hero p {
+    max-width: 690px;
+
+    margin: 0 auto;
+
+    color: #53689b;
+
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+
+/* Breadcrumb */
+
+.profile-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    margin-top: 22px;
+
+    font-size: 11px;
+}
+
+.profile-breadcrumb a {
+    color: #7181a8;
+
+    transition: color 0.2s ease;
+}
+
+.profile-breadcrumb a:hover {
+    color: var(--blue);
+}
+
+.profile-breadcrumb i {
+    color: var(--blue);
+    font-size: 8px;
+}
+
+.profile-breadcrumb span {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   IDENTITAS SEKOLAH
+   ========================================================= */
+
+.school-introduction {
+    padding: 105px 0;
+
+    background: #ffffff;
+}
+
+.school-introduction .profile-container {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+
+    align-items: center;
+
+    gap: 75px;
+}
+
+
+/* Text */
+
+.introduction-text h2 {
+    max-width: 720px;
+
+    margin-bottom: 22px;
+
+    color: var(--dark);
+
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.introduction-text h2 strong {
+    display: block;
+
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.introduction-text > p {
+    max-width: 750px;
+
+    margin-bottom: 18px;
+
+    color: var(--text);
+
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+
+/* Address */
+
+.school-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    max-width: 700px;
+
+    margin-top: 30px;
+    padding-top: 23px;
+
+    border-top: 1px solid var(--border);
+}
+
+.address-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--blue);
+
+    background: var(--blue-light);
+
+    border-radius: 12px;
+}
+
+.address-icon i {
+    font-size: 15px;
+}
+
+.school-address > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.school-address strong {
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.school-address span {
+    color: var(--text);
+    font-size: 13px;
+}
+
+
+/* School card */
+
+.introduction-card {
+    position: relative;
+
+    padding: 38px 30px 35px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f5f7ff,
+            #ffffff
+        );
+
+    border: 1px solid #e4e9f7;
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+.introduction-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -85px;
+    top: -85px;
+
+    border-radius: 50%;
+
+    background: rgba(18, 51, 181, 0.06);
+}
+
+.introduction-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    left: -50px;
+    bottom: -50px;
+
+    border-radius: 50%;
+
+    background: rgba(245, 196, 0, 0.10);
+}
+
+.school-logo {
+    position: relative;
+    z-index: 2;
+
+    width: 205px;
+    height: 205px;
+
+    margin: 0 auto 25px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    box-shadow: 0 12px 30px rgba(18, 51, 181, 0.09);
+}
+
+.school-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.introduction-card > span {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.introduction-card > strong {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--blue);
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.introduction-card > p {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   NILAI SEKOLAH
+   ========================================================= */
+
+.values-section {
+    padding: 88px 0 96px;
+    background: #f8fafc;
+}
+
+.section-heading-left {
+    max-width: 720px;
+    margin-bottom: 32px;
+}
+
+.section-heading-left .section-label {
+    margin-bottom: 4px;
+    color: #d97706;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.section-heading-left h2 {
+    margin: 0 0 6px;
+    color: #0b1b3a;
+    font-size: clamp(28px, 3.1vw, 39px);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.section-heading-left h2 strong {
+    color: #0b1b3a;
+    font-weight: 700;
+}
+
+.section-heading-left p {
+    max-width: 650px;
+    margin: 0;
+    color: #536078;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.value-card {
+    min-height: 190px;
+    padding: 24px 20px 20px;
+    background: #ffffff;
+    border: 1px solid #e3e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(15, 35, 70, 0.025);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(18, 51, 181, 0.16);
+    box-shadow: 0 12px 28px rgba(20, 48, 130, 0.08);
+}
+
+.value-number {
+    display: block;
+    margin-bottom: 21px;
+    color: #b9c5df;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.value-card h3 {
+    margin: 0 0 7px;
+    color: #0b1b3a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.value-card p {
+    margin: 0;
+    color: #536078;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MOTTO
+   ========================================================= */
+
+.motto-section {
+    padding: 90px 0;
+
+    background: #ffffff;
+}
+
+.motto-box {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    padding: 55px 60px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            120deg,
+            #071b65,
+            #1233b5 65%,
+            #315bd8
+        );
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 55px rgba(18, 51, 181, 0.20);
+}
+
+.motto-box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -160px;
+    top: -190px;
+
+    border: 60px solid rgba(255, 255, 255, 0.045);
+
+    border-radius: 50%;
+}
+
+.motto-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    left: -100px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.motto-left,
+.motto-right {
+    position: relative;
+    z-index: 2;
+}
+
+.motto-left .section-label {
+    color: var(--yellow);
+}
+
+.motto-left h2 {
+    margin: 8px 0 5px;
+
+    color: var(--yellow);
+
+    font-size: clamp(52px, 6vw, 78px);
+    font-weight: 800;
+
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.motto-left p {
+    color: rgba(255, 255, 255, 0.76);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.motto-right {
+    align-self: center;
+
+    padding-left: 40px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.motto-right > i {
+    margin-bottom: 13px;
+
+    color: var(--yellow);
+
+    font-size: 22px;
+}
+
+.motto-right p {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+    line-height: 1.9;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   SAMBUTAN KEPALA SEKOLAH
+   ========================================================= */
+
+.public-principal-section {
+    padding: 105px 0;
+
+    background: var(--section);
+}
+
+.public-principal-wrapper {
+    display: grid;
+
+    grid-template-columns: 350px 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* Photo */
+
+.public-principal-photo {
+    position: relative;
+}
+
+.public-principal-photo-frame {
+    position: relative;
+
+    padding: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 25px;
+
+    box-shadow: var(--shadow);
+}
+
+.public-principal-photo-frame::before {
+    content: "";
+
+    position: absolute;
+
+    left: -12px;
+    bottom: -12px;
+
+    width: 80px;
+    height: 80px;
+
+    background: var(--yellow);
+
+    border-radius: 15px;
+
+    z-index: -1;
+}
+
+.public-principal-photo-frame img {
+    width: 100%;
+
+    aspect-ratio: 0.82;
+
+    object-fit: cover;
+
+    border-radius: 17px;
+}
+
+.public-principal-name {
+    position: absolute;
+
+    left: 0;
+    bottom: 25px;
+
+    padding: 14px 20px;
+
+    color: #ffffff;
+
+    background: var(--blue);
+
+    border-radius: 0 13px 13px 0;
+
+    box-shadow: 0 10px 25px rgba(18, 51, 181, 0.22);
+}
+
+.public-principal-name strong {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.public-principal-name span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 10px;
+}
+
+
+/* Message */
+
+.public-principal-message {
+    position: relative;
+
+    padding: 40px 45px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow-small);
+}
+
+.public-principal-message > i {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--blue);
+
+    font-size: 25px;
+}
+
+.principal-message-text,
+.public-principal-message p {
+    color: var(--text);
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+.public-principal-message p + p {
+    margin-top: 17px;
+}
+
+
+/* =========================================================
+   STRUKTUR ORGANISASI
+   ========================================================= */
+
+.organization-section {
+    padding: 105px 0;
+
+    background: #ffffff;
+}
+
+.organization-chart {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8faff,
+            #ffffff
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow-small);
+}
+
+
+/* Main */
+
+.organization-main {
+    width: min(370px, 100%);
+
+    margin: 0 auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    background: var(--blue);
+
+    color: #ffffff;
+
+    border-radius: 17px;
+
+    box-shadow: 0 12px 28px rgba(18, 51, 181, 0.22);
+}
+
+.organization-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.13);
+
+    border-radius: 13px;
+}
+
+.organization-icon i {
+    font-size: 20px;
+}
+
+.organization-main span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.organization-main h3 {
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 750;
+}
+
+
+/* Line */
+
+.organization-line {
+    width: 2px;
+    height: 38px;
+
+    margin: 0 auto;
+
+    background: #cbd4e6;
+}
+
+
+/* Grid */
+
+.organization-grid {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.organization-item {
+    min-height: 115px;
+
+    padding: 20px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.organization-item:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(18, 51, 181, 0.15);
+
+    box-shadow: var(--shadow-small);
+}
+
+.organization-item-icon {
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--blue);
+
+    background: var(--blue-light);
+
+    border-radius: 11px;
+}
+
+.organization-item-icon i {
+    font-size: 15px;
+}
+
+.organization-item strong {
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 11px;
+    font-weight: 750;
+
+    line-height: 1.4;
+}
+
+.organization-item span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   EKSTRAKURIKULER
+   ========================================================= */
+
+.extracurricular-section {
+    padding: 105px 0;
+
+    background: var(--section);
+}
+
+.extracurricular-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.extracurricular-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.extracurricular-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* Image */
+
+.extracurricular-image {
+    position: relative;
+
+    height: 190px;
+
+    overflow: hidden;
+
+    background: var(--blue-light);
+}
+
+.extracurricular-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.extracurricular-card:hover .extracurricular-image img {
+    transform: scale(1.05);
+}
+
+.extracurricular-empty-image {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--blue);
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf2ff,
+            #f8faff
+        );
+}
+
+.extracurricular-empty-image i {
+    font-size: 45px;
+}
+
+
+/* Content */
+
+.extracurricular-content {
+    padding: 21px;
+}
+
+.extracurricular-content > span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--blue);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.extracurricular-content h3 {
+    margin-bottom: 8px;
+
+    color: var(--dark);
+
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.extracurricular-content p {
+    min-height: 55px;
+
+    margin-bottom: 17px;
+
+    color: var(--text);
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.extracurricular-footer {
+    padding-top: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--border);
+}
+
+.extracurricular-footer span {
+    color: var(--muted);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.extracurricular-footer i {
+    color: var(--blue);
+
+    font-size: 11px;
+}
+
+
+/* Empty */
+
+.empty-public {
+    grid-column: 1 / -1;
+
+    padding: 70px 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px dashed #ccd4e3;
+
+    border-radius: 20px;
+}
+
+.empty-public > i {
+    margin-bottom: 15px;
+
+    color: var(--blue);
+
+    font-size: 38px;
+}
+
+.empty-public h3 {
+    margin-bottom: 6px;
+
+    color: var(--dark);
+
+    font-size: 19px;
+}
+
+.empty-public p {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.public-footer {
+    padding: 65px 0 25px;
+
+    color: #ffffff;
+
+    background: #09142f;
+}
+
+.footer-main {
+    padding-bottom: 40px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 80px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+/* Brand */
+
+.footer-brand {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+.footer-logo {
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 13px;
+}
+
+.footer-logo img {
+    width: 43px;
+    height: 43px;
+
+    object-fit: contain;
+}
+
+.footer-brand h3 {
+    margin-bottom: 7px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.footer-brand p {
+    max-width: 500px;
+
+    color: rgba(255, 255, 255, 0.57);
+
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* Contact */
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.footer-contact > div {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    color: rgba(255, 255, 255, 0.60);
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.footer-contact i {
+    width: 17px;
+
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    color: var(--yellow);
+
+    font-size: 12px;
+}
+
+
+/* Bottom */
+
+.footer-bottom {
+    padding-top: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom > span {
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 10px;
+}
+
+.footer-bottom a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom i {
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1200PX
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .navbar-container {
+        width: min(100% - 45px, 1200px);
+    }
+
+    .profile-container {
+        width: min(100% - 50px, 1150px);
+    }
+
+    .navbar-menu a {
+        padding: 9px 9px;
+        font-size: 12px;
+    }
+
+    .school-introduction .profile-container {
+        gap: 45px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .extracurricular-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .organization-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900PX
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .public-navbar {
+        height: 75px;
+    }
+
+    .navbar-container {
+        width: calc(100% - 35px);
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-button {
+        padding: 10px 15px;
+    }
+
+    .profile-hero {
+        min-height: 550px;
+        padding-top: 130px;
+    }
+
+    .profile-hero-content {
+        width: calc(100% - 50px);
+    }
+
+    .school-introduction .profile-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .introduction-card {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .motto-box {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 45px;
+    }
+
+    .motto-right {
+        padding-left: 0;
+        padding-top: 30px;
+
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .public-principal-wrapper {
+        grid-template-columns: 300px 1fr;
+
+        gap: 40px;
+    }
+
+    .footer-main {
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 700PX
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .profile-container {
+        width: calc(100% - 35px);
+    }
+
+    .navbar-container {
+        width: calc(100% - 25px);
+    }
+
+    .navbar-brand img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .navbar-brand-text strong {
+        font-size: 14px;
+    }
+
+    .navbar-brand-text span {
+        font-size: 8px;
+    }
+
+    .navbar-button {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    .navbar-button i {
+        display: none;
+    }
+
+    .profile-hero {
+        min-height: 510px;
+        padding: 120px 0 70px;
+    }
+
+    .profile-hero-content {
+        width: calc(100% - 35px);
+    }
+
+    .profile-hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .profile-hero p {
+        font-size: 13px;
+    }
+
+    .school-introduction,
+    .values-section,
+    .motto-section,
+    .public-principal-section,
+    .organization-section,
+    .extracurricular-section {
+        padding: 75px 0;
+    }
+
+    .introduction-text h2 {
+        font-size: 34px;
+    }
+
+    .section-heading-center {
+        margin-bottom: 35px;
+    }
+
+    .section-heading-center h2 {
+        font-size: 32px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .motto-box {
+        padding: 35px 28px;
+        border-radius: 22px;
+    }
+
+    .motto-left h2 {
+        font-size: 58px;
+    }
+
+    .public-principal-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .public-principal-photo {
+        width: min(300px, 100%);
+        margin: 0 auto;
+    }
+
+    .public-principal-message {
+        padding: 30px;
+    }
+
+    .organization-chart {
+        padding: 25px 18px;
+    }
+
+    .organization-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .organization-main {
+        width: 100%;
+    }
+
+    .extracurricular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .extracurricular-image {
+        height: 210px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 480PX
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .profile-hero h1 {
+        font-size: 36px;
+    }
+
+    .profile-hero p {
+        font-size: 12px;
+    }
+
+    .profile-breadcrumb {
+        font-size: 10px;
+    }
+
+    .introduction-text h2 {
+        font-size: 30px;
+    }
+
+    .introduction-card {
+        padding: 30px 20px;
+    }
+
+    .school-logo {
+        width: 175px;
+        height: 175px;
+    }
+
+    .section-heading-center h2 {
+        font-size: 28px;
+    }
+
+    .motto-left h2 {
+        font-size: 50px;
+    }
+
+    .motto-right p {
+        font-size: 13px;
+    }
+
+    .public-principal-message {
+        padding: 25px 22px;
+    }
+
+    .principal-message-text,
+    .public-principal-message p {
+        font-size: 12px;
+    }
+
+    .organization-main {
+        padding: 17px;
+    }
+
+    .organization-main h3 {
+        font-size: 15px;
+    }
+
+    .footer-brand {
+        gap: 12px;
+    }
+}
+
+/* =========================================================
+   FINAL PUBLIC PROFIL OVERRIDES
+   ========================================================= */
+
+/* Tidak ada tombol Hubungi Kami di navbar Profil */
+.navbar-button {
+    display: none !important;
+}
+
+/* Sambutan: foto dan box lebih dekat, teks lebih nyaman dibaca */
+.public-principal-section {
+    padding: 90px 0 105px;
+    background: #f8fafc;
+}
+
+.public-principal-wrapper {
+    grid-template-columns: 380px minmax(0, 1fr);
+    column-gap: 22px;
+}
+
+.public-principal-photo-frame::before {
+    display: none;
+}
+
+.public-principal-photo-frame {
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(20,48,130,.08);
+}
+
+.public-principal-photo-frame img {
+    border-radius: 12px;
+}
+
+.public-principal-name {
+    position: static;
+    width: calc(100% - 20px);
+    margin: 10px auto 0;
+    padding: 10px 12px;
+    text-align: center;
+    color: #0b1b3a;
+    background: #eef2f7;
+    border-radius: 9px;
+    box-shadow: none;
+}
+
+.public-principal-name strong { font-size: 12px; }
+.public-principal-name span { color: #71809a; font-size: 9px; }
+
+.public-principal-message {
+    max-width: 650px;
+    padding: 42px 38px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(20,48,130,.045);
+}
+
+.public-principal-message > i {
+    color: #1233b5;
+    font-size: 22px;
+}
+
+.principal-message-text,
+.public-principal-message p {
+    color: #536078;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.principal-message-text p:first-child,
+.public-principal-message p:first-of-type {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0b1b3a;
+}
+
+/* Struktur organisasi final */
+.organization-section {
+    padding: 85px 0 95px;
+    background: #fff;
+}
+
+.organization-heading,
+.organization-section .section-heading-center {
+    max-width: 700px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.organization-section .section-heading-center .section-label {
+    margin-bottom: 4px;
+    color: #c87500;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.organization-section .section-heading-center h2 {
+    margin: 0 0 7px;
+    color: #0b1b3a;
+    font-size: clamp(30px,3.2vw,40px);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.organization-section .section-heading-center h2 strong {
+    color: #0b1b3a;
+    font-weight: 700;
+}
+
+.organization-section .section-heading-center p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #536078;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.organization-chart {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.organization-main {
+    width: 380px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 25px 25px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #192a63;
+    border-radius: 9px;
+    box-shadow: 0 5px 10px rgba(15,35,80,.14);
+}
+
+.organization-main .organization-icon {
+    display: none;
+}
+
+.organization-main span {
+    display: block;
+    margin-bottom: 5px;
+    color: #f5c400;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.organization-main h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.organization-line {
+    width: 1px;
+    height: 33px;
+    margin: 0 auto;
+    background: #ccd5e4;
+}
+
+.organization-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 13px;
+}
+
+.organization-item {
+    min-height: 112px;
+    padding: 18px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e2e7ef;
+    border-radius: 9px;
+    transition: transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+
+.organization-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(18,51,181,.16);
+    box-shadow: 0 8px 20px rgba(20,48,100,.07);
+}
+
+.organization-item-icon { display: none; }
+
+.organization-item strong {
+    display: block;
+    color: #0b1b3a;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.organization-item span {
+    display: block;
+    margin-top: 5px;
+    color: #71809a;
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+/* Ekstrakurikuler: tanpa footer/arrow di bawah card */
+.extracurricular-footer { display: none !important; }
+
+/* Internal page hanya copyright */
+.public-footer { display: none !important; }
+
+.copyright {
+    padding: 18px 30px;
+    color: rgba(255,255,255,.45);
+    background: #061027;
+    border-top: 1px solid rgba(255,255,255,.08);
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .organization-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width: 900px) {
+    .public-principal-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .public-principal-photo { max-width: 380px; margin: 0 auto; }
+    .public-principal-message { max-width: 100%; }
+}
+
+@media (max-width: 700px) {
+    .organization-grid { grid-template-columns: 1fr; gap: 12px; }
+    .organization-main { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .public-principal-message { padding: 30px 24px; }
+    .principal-message-text, .public-principal-message p { font-size: 13px; }
+    .principal-message-text p:first-child, .public-principal-message p:first-of-type { font-size: 17px; }
+    .copyright { padding: 16px 15px; font-size: 9px; }
+}
